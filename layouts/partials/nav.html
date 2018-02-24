@@ -1,13 +1,21 @@
-<nav class="main-nav">
-	{{ if not .IsHome }}
-		<a href='{{ .Site.BaseURL }}'> <span class="arrow">←</span>{{ .Site.Params.home | default "Home" }}</a>
-	{{ end }}
+<div class="header">
+	<div class="logo">
+		{{ if not .IsHome }}
+			<h1><a href='{{ .Site.BaseURL }}'>Cory McDonald</a></h1>
+		{{ end }}
+	</div>
 
-	{{ range .Site.Menus.main }}
- 		<a href='{{ .URL }}'>{{ .Name }}</a>
-  	{{ end }}
+	<nav class="main-nav">
+		{{ if not .IsHome }}
+			<a href='{{ .Site.BaseURL }}'> <span class="arrow">←</span>{{ .Site.Params.home | default "Home" }}</a>
+		{{ end }}
 
-	{{ if .Site.Params.enableRSS }}
-		<a class="cta" href="{{ .Site.RSSLink }}">{{ .Site.Params.subscribe | default "Subscribe" }}</a>
-	{{ end }}
-</nav>
+		{{ range .Site.Menus.main }}
+			<a href='{{ .URL }}'>{{ .Name }}</a>
+		{{ end }}
+
+		{{ if .Site.Params.enableRSS }}
+			<a class="cta" href="{{ .Site.RSSLink }}">{{ .Site.Params.subscribe | default "Subscribe" }}</a>
+		{{ end }}
+	</nav>
+</div>

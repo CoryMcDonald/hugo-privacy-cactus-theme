@@ -99,15 +99,30 @@ h2 {
 
 }
 
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.logo {
+	padding: 20px 20px 0;
+}
+
+.logo h1 {
+	font-weight: 400;
+	letter-spacing: 0px;
+	font-size: 20px;
+	color: #222;
+}
+
 nav.main-nav {
 	padding: 20px 20px 0;
-
+	justify-content: flex-end;
 	/*max-width: 600px;*/
 	/*width:100%;*/
 	background: #fff;
 	background: rgba(255,255,255,.90);
-	margin: 0 auto;
-	text-align: right;
 	/*position: fixed;*/
 	z-index: 100;
 }
@@ -618,9 +633,9 @@ a.symbol:hover {
     color: #BCD4DA;
 }
 
-code { 
-	font-family:Menlo, Monaco, Courier; 
-	background-color:#EEE; font-size:14px; 
-	padding: 4px; 
+code {
+	font-family:Menlo, Monaco, Courier;
+	background-color:#EEE; font-size:14px;
+	padding: 4px;
 	font-weight: 600;
 }
